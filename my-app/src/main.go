@@ -9,6 +9,9 @@ import (
 	// "github.com/aws/aws-sdk-go/service/dynamodb"
 	// "github.com/aws/aws-sdk-go/service/dynamodb/dynamodbiface"
 	"gopkg.in/yaml.v2"
+	"package/db"
+        "package/s3-old"
+        "package/ec2-cloudwatch"
      )
 
 type Config struct {
