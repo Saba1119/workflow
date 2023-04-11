@@ -12,6 +12,9 @@ import (
 	"package/db"
         "package/s3-old"
         "package/ec2-cloudwatch"
+	"my-app/src/db"
+        "my-app/src/s3-old"
+        "my-app/src/ec2-cloudwatch"
      )
 
 type Config struct {
