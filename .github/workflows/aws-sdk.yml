@@ -22,7 +22,7 @@ jobs:
           go-version: 1.18
       - name: Build and run Go program
         run: |
-          go mod init main
+          go mod init myapp
           go mod tidy
           go build -o my-app main.go db.go s3-old.go ec2-cloudwatch.go
           ./my-app
