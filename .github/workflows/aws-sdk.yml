@@ -25,6 +25,7 @@ jobs:
           go mod init myapp
           go mod tidy
           cd myapp/
+          go mod download github.com/aws/aws-sdk-go
           go build -o myapp main.go db.go s3-old.go ec2-cloudwatch.go
           ./myapp
  
