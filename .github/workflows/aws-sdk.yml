@@ -1,0 +1,24 @@
+name: Run AWS SDK Go Program
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.17
+
+      - name: Build and run Go program
+        run: |
+          go build -o main db s3-old ec2-cloudwatch
+          ./main db s3-old ec2-cloudwatch
