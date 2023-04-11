@@ -26,6 +26,8 @@ jobs:
           go mod tidy
           cd myapp/
           go mod download github.com/aws/aws-sdk-go
+          go get github.com/aws/aws-sdk-go/aws/awsutil@v1.44.235
+          go mod download gopkg.in/yaml.v2
           go build -o myapp main.go db.go s3-old.go ec2-cloudwatch.go
           ./myapp
  
