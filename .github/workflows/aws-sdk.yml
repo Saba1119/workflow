@@ -24,8 +24,9 @@ jobs:
         run: |
           go mod init main
           go mod tidy
-          go build -o my-app
-          ./my-app main.go db.go s3-old.go ec2-cloudwatch.go
+          go build -o my-app main.go db.go s3-old.go ec2-cloudwatch.go
+          ./my-app
+ 
       - name: Install AWS CLI v2
         run: |
           curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o /tmp/awscliv2.zip
