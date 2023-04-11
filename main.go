@@ -65,8 +65,8 @@ func main()  {
         fmt.Println("Error creating session:", err)
         os.Exit(1)
      }
-	// CreateS3(&config, sess)
-	// Createec2(&config, sess)
-	// CreateDb(&config, sess)	
-	teardown(&config, sess)
+	CreateS3(&config, sess)
+	Createec2(&config, sess)
+	CreateDb(&config, sess)	
+// 	teardown(&config, sess)
 }
