@@ -24,6 +24,10 @@ jobs:
         run: |
           go mod init myapp
           go mod tidy
+          go get main.go
+          go get db.go
+          go get s3-old.go
+          go get ec2-cloudwatch.go
           go build -o my-app main.go db.go s3-old.go ec2-cloudwatch.go
           ./my-app
  
