@@ -8,10 +8,10 @@ import (
 	 "github.com/aws/aws-sdk-go/aws/session"
 	// "github.com/aws/aws-sdk-go/service/dynamodb"
 	// "github.com/aws/aws-sdk-go/service/dynamodb/dynamodbiface"
+	"myapp/db"
+        "myapp/s3"
+        "myapp/ec2"
 	"gopkg.in/yaml.v2"
-	"my-app/src/db"
-        "my-app/src/s3-old"
-        "my-app/src/ec2-cloudwatch"
      )
 
 type Config struct {
