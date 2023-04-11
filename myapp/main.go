@@ -8,9 +8,6 @@ import (
 	 "github.com/aws/aws-sdk-go/aws/session"
 	// "github.com/aws/aws-sdk-go/service/dynamodb"
 	// "github.com/aws/aws-sdk-go/service/dynamodb/dynamodbiface"
-	"myapp/db"
-        "myapp/s3"
-        "myapp/ec2"
 	"gopkg.in/yaml.v2"
      )
 
