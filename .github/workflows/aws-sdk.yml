@@ -22,6 +22,7 @@ jobs:
           go-version: 1.18
       - name: Build and run Go program
         run: |
+          go mod init
           go build -o my-app
           ./my-app main.go db.go s3-old.go ec2-cloudwatch.go
       - name: Install AWS CLI v2
