@@ -14,9 +14,9 @@ import (
 type Config struct {
 	TableName string `yaml:"tableName"`
 	AWS_REGION string `yaml:"AWS_REGION"`
-    BUCKET_NAME string `yaml:"BUCKET_NAME"`
-    KMS_KEY string `yaml:"KMS_KEY"`
-    ImageID            string `yaml:"IMAGE_ID"`
+        BUCKET_NAME string `yaml:"BUCKET_NAME"`
+        KMS_KEY string `yaml:"KMS_KEY"`
+        ImageID            string `yaml:"IMAGE_ID"`
 	InstanceType       string `yaml:"INSTANCE_TYPE"`
 	GroupName          string `yaml:"GROUP_NAME"`
 	AlarmName          string `yaml:"ALARM_NAME"`
@@ -36,9 +36,9 @@ type Config struct {
 
 
 	InstanceID          string `yaml:"INSTANCE_ID"`
-    TargetGroupARN1   string  `yaml:"TARGETGROUP_ARN1"`
-    TargetGroupARN2   string  `yaml:"TARGETGROUP_ARN2"`
-    // KMSID            string `yaml:"KMS_ID"`
+        TargetGroupARN1   string  `yaml:"TARGETGROUP_ARN1"`
+        TargetGroupARN2   string  `yaml:"TARGETGROUP_ARN2"`
+        // KMSID            string `yaml:"KMS_ID"`
 
 }
 
