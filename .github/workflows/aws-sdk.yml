@@ -1,0 +1,45 @@
+name: Run AWS SDK Go Program
+on:
+  # push:
+  #   branches:
+  #     - main
+  workflow_dispatch:
+    inputs:
+      foo:
+        description: 'A foo input'
+        required: true
+        default: 'default value'      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
+          aws-region: us-east-1
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.18
+      - name: Build and run Go program
+        run: |
+          go mod init myapp
+          go mod tidy
+          cd myapp/
+          go mod download github.com/aws/aws-sdk-go
+          go get github.com/aws/aws-sdk-go/aws/awsutil@v1.44.235
+          go mod download gopkg.in/yaml.v2
+          go build -o myapp main.go db.go s3-old.go ec2-cloudwatch.go
+          ./myapp
+ 
+
+
+
+
+
+
