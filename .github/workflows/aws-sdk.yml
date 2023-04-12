@@ -1,8 +1,8 @@
 name: Run AWS SDK Go Program
 on:
-  # push:
-  #   branches:
-  #     - main
+#   push:
+#     branches:
+#       - main
   workflow_dispatch:
     inputs:
       foo:
@@ -36,7 +36,8 @@ jobs:
           go mod download gopkg.in/yaml.v2
           go build -o myapp main.go db.go s3-old.go ec2-cloudwatch.go
           ./myapp
- 
+          go build -o myapp main.go delete.go
+          ./myapp
 
 
 
